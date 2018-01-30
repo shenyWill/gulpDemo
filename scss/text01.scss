@@ -1,0 +1,22 @@
+$width:400px;
+@import '_sprite.scss';
+@mixin border{
+    border: 3px solid blue;
+}
+@mixin borderWidth($width){
+    border-width: $width;
+}
+#box{
+    height: 200px;
+    width: $width;
+    background: green;
+    transform: rotate(45deg);
+}
+#sprite{
+    height: 200px;
+    width: 200px;
+    @include border;
+    margin-top: 100px;
+    @include sprite($a);
+    @include borderWidth(3px);
+}
